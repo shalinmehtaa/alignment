@@ -1,0 +1,27 @@
+[project]
+name = "alignment"
+version = "0.1.0"
+description = "AI alignment evaluation experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.55.0",
+    "fuzzysearch>=0.8.0",
+    "google-genai>=1.33.0",
+    "inspect-ai>=0.3.120",
+    "ipykernel>=6.30.0",
+    "ipywidgets>=8.1.0",
+    "matplotlib>=3.10.0",
+    "numpy>=2.2.0",
+    "openai>=1.91.0",
+    "pandas>=2.3.0",
+    "petri",
+    "python-dotenv>=1.1.1",
+    "scienceplots>=2.1.0",
+    "scikit-learn>=1.7.0",
+    "seaborn>=0.13.0",
+]
+
+[tool.uv.sources]
+petri = { path = "../petri", editable = true }
+

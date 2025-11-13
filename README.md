@@ -1,6 +1,6 @@
-# AI Alignment Sandbox
+# AI alignment studies
 
-Code, prompts, and data for running AI alignment evaluations across multiple language models using Petri.
+Code, prompts, and data for running AI alignment evaluations across multiple LLMs using Petri.
 
 ## Setup
 
@@ -30,14 +30,16 @@ Run evaluations on any model via OpenRouter:
 
 ```bash
 # Baseline evaluation
-uv run python run_eval.py --target-model openrouter/MODEL_NAME --scenario-family baseline
+uv run python run.py --target-model openrouter/MODEL_NAME --scenario-family baseline
 
-# Specialized scenarios
-uv run python run_eval.py --target-model openrouter/MODEL_NAME --scenario-family cyber
+# Specialized scenarios: cyber
+uv run python run.py --target-model openrouter/MODEL_NAME --scenario-family cyber
 
-uv run python run_eval.py --target-model openrouter/MODEL_NAME --scenario-family influence
+# Specialized scenarios: propaganda or influence
+uv run python run.py --target-model openrouter/MODEL_NAME --scenario-family influence
 
-uv run python run_eval.py --target-model openrouter/MODEL_NAME --scenario-family geopolitics
+# Specialized scenarios: geopolitics
+uv run python run.py --target-model openrouter/MODEL_NAME --scenario-family geopolitics
 ```
 
 ## Reproducing Analysis
@@ -55,14 +57,14 @@ uv run jupyter notebook analysis_china.ipynb
 ## Data Structure
 
 - `instructions.py` - Scenario definitions and custom metric dimensions
-- `run_eval.py` - Evaluation script
+- `run.py` - Evaluation script
 - `*-baseline/` - Raw transcript data from baseline evaluations
 - `*-cyber/` - Cybersecurity scenario transcripts
 - `*-geopolitics/` - Geopolitical bias scenario transcripts
 - `*-influence/` - Influence/manipulation scenario transcripts
 - `analysis_*.ipynb` - Analysis notebooks with plotting code
 
-## Study Details
+-----
 
 This study used Petri version 0.1.0 with model versions accessed during the first two weeks of November 2025. Since models may change over time, results using current API endpoints may differ slightly.
 

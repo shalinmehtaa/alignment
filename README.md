@@ -1,6 +1,6 @@
 # AI alignment studies
 
-Code, prompts, and data for running AI alignment evaluations across multiple LLMs using Petri.
+Code, prompts, and data for running AI alignment evaluations across multiple LLMs using Petri. The scenarios and prompts used here are for red-teaming/auditing purposes only, not usage advice.
 
 ## Setup
 
@@ -54,6 +54,8 @@ uv run jupyter notebook analysis_baseline.ipynb
 uv run jupyter notebook analysis_china.ipynb
 ```
 
+This study used Petri version 0.1.0 with model versions accessed during the first two weeks of November 2025. Since models may change over time, results using current API endpoints may differ slightly.
+
 ## Data Structure
 
 - `instructions.py` - Scenario definitions and custom metric dimensions
@@ -64,7 +66,6 @@ uv run jupyter notebook analysis_china.ipynb
 - `*-influence/` - Influence/manipulation scenario transcripts
 - `analysis_*.ipynb` - Analysis notebooks with plotting code
 
------
+## Responsible Use Disclaimer
 
-This study used Petri version 0.1.0 with model versions accessed during the first two weeks of November 2025. Since models may change over time, results using current API endpoints may differ slightly.
-
+This repository is for auditing and research purposes only. It is not intended to help users circumvent model safeguards or engage in harmful activity.
